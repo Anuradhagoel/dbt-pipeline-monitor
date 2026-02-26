@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: orders_summary
+    description: Joined orders and customers table with data quality tests
+    columns:
+      - name: order_id
+        description: Unique order identifier — must never be null or duplicated
+        tests:
+          - not_null
+          - unique
+
+      - name: customer_id
+        description: Customer who placed the order — must never be null
+        tests:
+          - not_null
+
+      - name: amount
+        description: Order amount in USD — must never be null
+        tests:
+          - not_null
