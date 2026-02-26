@@ -1,6 +1,6 @@
 # 🚨 dbt Pipeline Monitor
 
-An automated data quality monitor that runs dbt tests every morning and uses AI to explain failures in plain English — before your stakeholders find out.
+An automated data quality monitor that runs dbt tests every morning and uses AI to explain failures in plain English-before your stakeholders find out.
 
 ## What It Does
 
@@ -29,7 +29,7 @@ the morning reporting run."
 
 Silent pipeline failures are one of the most common pain points in data engineering. By the time a stakeholder notices something is wrong, it's already too late. This project automates the detection and explanation of failures so the data team always knows first.
 
-This same pattern is used at scale by companies like Airbnb and Netflix — the difference is they use Airflow instead of cron and PagerDuty instead of terminal output. The core logic is identical.
+This same pattern is used at scale by companies like Airbnb and Netflix-the difference is they use Airflow instead of cron and PagerDuty instead of terminal output. The core logic is identical.
 
 ## Tech Stack
 
@@ -64,35 +64,35 @@ dbt_pipeline_monitor/
 - Python 3.10+
 - Node.js 20+
 
-### Step 1 — Clone the repo
+### Step 1-Clone the repo
 ```bash
 git clone https://github.com/YOUR_USERNAME/dbt-pipeline-monitor
 cd dbt-pipeline-monitor
 ```
 
-### Step 2 — Install dependencies
+### Step 2-Install dependencies
 ```bash
 pip3 install dbt-core dbt-duckdb groq --break-system-packages
 ```
 
-### Step 3 — Set up dbt project
+### Step 3-Set up dbt project
 ```bash
 dbt init pipeline_monitor
 # Select duckdb when prompted
 cd pipeline_monitor
 ```
 
-### Step 4 — Get a free Groq API key
+### Step 4-Get a free Groq API key
 1. Go to [console.groq.com](https://console.groq.com)
 2. Sign up (no credit card needed)
 3. Create an API key
 
-### Step 5 — Add your API key to run_monitor.sh
+### Step 5-Add your API key to run_monitor.sh
 ```bash
 export GROQ_API_KEY="your_key_here"
 ```
 
-### Step 6 — Run manually to test
+### Step 6-Run manually to test
 ```bash
 dbt seed
 dbt run
@@ -100,7 +100,7 @@ dbt test
 python3 monitor.py
 ```
 
-### Step 7 — Schedule with cron (runs daily at 8am)
+### Step 7-Schedule with cron (runs daily at 8am)
 ```bash
 crontab -e
 # Add this line:
@@ -123,9 +123,9 @@ The core logic (automated testing → AI explanation → alert) is identical at 
 
 ## Lessons Learned
 
-- **Monitoring > reacting** — catch failures before stakeholders do
-- **Trendy tools aren't always the right tools** — started with OpenClaw, hit WSL2 issues, adapted
-- **Start small and ship** — this took a weekend to build and solves a real problem
+- **Monitoring > reacting** -catch failures before stakeholders do
+- **Trendy tools aren't always the right tools** -started with OpenClaw, hit WSL2 issues, adapted
+- **Start small and ship** -this took a weekend to build and solves a real problem
 
 ## Author
 
