@@ -129,6 +129,6 @@ The core logic (automated testing → AI explanation → alert) is identical at 
 
 ## Author
 
-Built by [@anuradha](https://linkedin.com/in/YOUR_PROFILE) as a learning project while exploring the modern data engineering stack.
+Built by [@anuradha](https://www.linkedin.com/in/anuradhagoel/) as a learning project while exploring the modern data engineering stack.
 
 
